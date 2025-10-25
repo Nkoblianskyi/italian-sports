@@ -22,7 +22,6 @@ const montserrat = Montserrat({
 export const metadata: Metadata = {
   title: "Passione Sport - Biglietti Sportivi di Lusso | passionesportluxuryit.com",
   description: "Accesso esclusivo alle più prestigiose leghe e tornei sportivi d'Italia - passionesportluxuryit.com",
-  generator: "v0.app",
 }
 
 export default function RootLayout({
