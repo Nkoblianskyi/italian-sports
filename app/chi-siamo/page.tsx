@@ -78,7 +78,7 @@ export default function ChiSiamoPage() {
                         return (
                           <div key={index} className="flex items-center gap-4 p-4 rounded-lg bg-background/50">
                             <div className="flex-shrink-0 w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center">
-                              <Icon className="w-6 h-6 text-accent" />
+                              <Icon className="w-6 h-6 text-black" />
                             </div>
                             <div>
                               <div className="font-serif text-2xl font-bold text-foreground">{stat.value}</div>
@@ -153,7 +153,7 @@ export default function ChiSiamoPage() {
                 >
                   <CardContent className="p-8 flex flex-col flex-grow">
                     <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br from-accent/20 to-accent/5 mb-6 group-hover:scale-110 transition-transform">
-                      <Icon className="h-8 w-8 text-accent" />
+                      <Icon className="h-8 w-8 text-black" />
                     </div>
                     <h3 className="font-serif text-xl font-bold mb-3">{service.title}</h3>
                     <p className="text-sm text-muted-foreground leading-relaxed text-pretty flex-grow">
@@ -205,7 +205,7 @@ export default function ChiSiamoPage() {
                 <Card key={index} className="border-border/50 text-center h-full flex flex-col">
                   <CardContent className="p-8 flex flex-col flex-grow">
                     <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-accent/10 mb-6 mx-auto">
-                      <Icon className="h-8 w-8 text-accent" />
+                      <Icon className="h-8 w-8 text-black" />
                     </div>
                     <h3 className="font-serif text-xl font-bold mb-3">{value.title}</h3>
                     <p className="text-sm text-muted-foreground leading-relaxed text-pretty flex-grow">
