@@ -7,8 +7,15 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Trophy, Star, ArrowRight } from "lucide-react"
 import { sportsData, type SportId } from "@/lib/sports-data"
 
-export async function generateMetadata({ params }: { params: { category: string } }): Promise<Metadata> {
-  const sport = sportsData[params.category as SportId]
+export function generateStaticParams() {
+  return Object.keys(sportsData).map((slug) => ({
+    category: slug,
+  }))
+}
+
+export async function generateMetadata({ params }: { params: Promise<{ category: string }> }): Promise<Metadata> {
+  const { category } = await params
+  const sport = sportsData[category as SportId]
 
   if (!sport) {
     return {
@@ -22,8 +29,9 @@ export async function generateMetadata({ params }: { params: { category: string 
   }
 }
 
-export default function SportCategoryPage({ params }: { params: { category: string } }) {
-  const sport = sportsData[params.category as SportId]
+export default async function SportCategoryPage({ params }: { params: Promise<{ category: string }> }) {
+  const { category } = await params
+  const sport = sportsData[category as SportId]
 
   if (!sport) {
     notFound()

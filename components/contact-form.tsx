@@ -63,7 +63,7 @@ export function ContactForm() {
               <div className="flex items-start gap-3 sm:gap-4">
                 <div className="min-w-0 flex-1">
                   <h3 className="font-semibold text-base sm:text-lg mb-2">Telefono</h3>
-                  <p className="text-xs sm:text-sm text-muted-foreground">+39 06 6385 1984</p>
+                  <p className="text-xs sm:text-sm text-muted-foreground">+39 02 1234 5678</p>
                   <p className="text-xs sm:text-sm text-muted-foreground">Lun-Ven: 9:00-18:00</p>
                 </div>
               </div>

@@ -5,6 +5,7 @@ export function Logo() {
   return (
     <Link href="/" className="flex items-center gap-3 group">
       <div className="relative">
+        <div className="absolute inset-0 bg-accent/20 blur-xl group-hover:bg-accent/30 transition-all" />
         <Image src="/favicon.ico" alt="Logo" width={32} height={32} />
       </div>
       <div>

@@ -8,7 +8,7 @@ export function TopBar() {
           <div className="flex items-center gap-6">
             <a href="tel:+390612345678" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
               <Phone className="h-4 w-4" />
-              <span className="hidden sm:inline">+39 06 6385 1984</span>
+              <span className="hidden sm:inline">+39 06 1234 5678</span>
             </a>
             <a
               href="mailto:info@passionesportluxuryit.com"

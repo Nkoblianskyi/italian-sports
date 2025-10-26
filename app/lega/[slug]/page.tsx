@@ -503,12 +503,13 @@ const leagues = {
 
 export function generateStaticParams() {
   return Object.keys(leagues).map((slug) => ({
-    slug,
+    slug: slug,
   }))
 }
 
-export default function LeaguePage({ params }: { params: { slug: string } }) {
-  const league = leagues[params.slug as keyof typeof leagues]
+export default async function LeaguePage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params
+  const league = leagues[slug as keyof typeof leagues]
 
   if (!league) {
     notFound()
